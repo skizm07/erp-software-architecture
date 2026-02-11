@@ -190,6 +190,15 @@ El siguiente diagrama de secuencia ilustra este flujo:
 
 # Vista de Despliegue {#section-deployment-view}
 
+El ERP del concesionario puede desplegarse en un servidor centralizado.
+
+- La aplicación web y el backend se alojan en un servidor de aplicaciones.
+- La base de datos PostgreSQL se ejecuta en un servidor de base de datos dedicado.
+- Los usuarios acceden al sistema a través de un navegador web.
+- La comunicación con el sistema contable externo se realiza mediante servicios web seguros.
+
+Esta configuración permite un despliegue sencillo y escalable para un sistema de tamaño medio.
+
 ## Nivel de infraestructura 1 {#_nivel_de_infraestructura_1}
 
 ***\<Diagrama General\>***
@@ -250,10 +259,17 @@ Características de Calidad/Rendimiento
 
 # Glosario {#section-glossary}
 
-+----------------------+-----------------------------------------------+
-| Término              | Definición                                    |
-+======================+===============================================+
-| *\<Término-1\>*      | *\<definicion-1\>*                            |
-+----------------------+-----------------------------------------------+
-| *\<Término-2\>*      | *\<definicion-2\>*                            |
-+----------------------+-----------------------------------------------+
+# Glosario
+
+**Producto**: Bien o artículo que puede ser adquirido por el concesionario, como vehículos o repuestos.
+
+**Proveedor**: Empresa o entidad que suministra productos o servicios al concesionario.
+
+**Orden de Compra**: Documento que registra la solicitud formal de adquisición de productos a un proveedor.
+
+**Detalle de Orden de Compra**: Registro que especifica los productos, cantidades y precios dentro de una orden de compra.
+
+**Inventario**: Conjunto de productos disponibles en el concesionario.
+
+**ERP**: Sistema de Planificación de Recursos Empresariales que integra y gestiona los procesos del negocio.
+
