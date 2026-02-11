@@ -175,19 +175,18 @@ Interfases importantes
 
 # Vista de Ejecución {#section-runtime-view}
 
-## \<Escenario de ejecución 1\> {#_escenario_de_ejecución_1}
+Uno de los escenarios críticos del Módulo de Compras es el registro de nuevos productos, ya que permite mantener actualizado el catálogo utilizado en las órdenes de compra.
 
--   *\<Inserte un diagrama de ejecución o la descripción del
-    escenario\>*
+## Escenario: Registrar un Producto
 
--   *\<Inserte la descripción de aspectos notables de las interacciones
-    entre los bloques de construcción mostrados en este diagrama.\>*
+1. El gestor de inventario accede a la aplicación web y completa el formulario de registro.
+2. La aplicación web envía los datos al backend mediante una solicitud HTTP.
+3. El backend valida la información recibida.
+4. Si los datos son correctos, el backend registra el producto en la base de datos.
+5. El sistema retorna una confirmación y la aplicación web actualiza el catálogo.
 
-## \<Escenario de ejecución 2\> {#_escenario_de_ejecución_2}
-
-## ...​
-
-## \<Escenario de ejecución n\> {#_escenario_de_ejecución_n}
+El siguiente diagrama de secuencia ilustra este flujo:
+![Diagrama de Secuencia - Registrar Producto](./images/DiagramaSecuencia.png)
 
 # Vista de Despliegue {#section-deployment-view}
 
