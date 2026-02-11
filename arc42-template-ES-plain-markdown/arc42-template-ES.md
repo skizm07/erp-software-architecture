@@ -57,7 +57,7 @@ Para el desarrollo del ERP del concesionario se tomaron las siguientes decisione
 - El frontend será una **Aplicación Web (SPA)** desarrollada con **HTML, CSS y JavaScript**.
 - La comunicación entre frontend y backend se realizará mediante **HTTP/HTTPS usando JSON**.
 - El sistema se integrará con un **Sistema Contable Externo** mediante servicios web.
-- 
+ 
 # Alcance y Contexto del Sistema {#section-context-and-scope}
 
 ## Contexto de Negocio {#_contexto_de_negocio}
@@ -84,6 +84,19 @@ A continuación, se presenta el Diagrama de Contexto (C1), el cual muestra el si
 # Estrategia de solución {#section-solution-strategy}
 
 # Vista de Bloques {#section-building-block-view}
+
+La arquitectura del ERP del concesionario se basa en una arquitectura monolítica compuesta por varios contenedores con responsabilidades bien definidas.
+
+## Descripción de los Contenedores
+
+- **Aplicación Web**: Proporciona la interfaz gráfica para que los usuarios gestionen compras, proveedores e inventario.
+- **Backend Monolítico**: Contiene la lógica de negocio del ERP, valida reglas, gestiona procesos y expone servicios.
+- **Base de Datos**: Almacena la información de productos, proveedores, órdenes de compra e inventario.
+- **Sistema Contable Externo**: Recibe información financiera para el registro contable.
+
+El siguiente diagrama representa la vista de contenedores del sistema.
+
+![Diagrama de Contenedores](./images/C2.png)
 
 ## Sistema General de Caja Blanca {#_sistema_general_de_caja_blanca}
 
