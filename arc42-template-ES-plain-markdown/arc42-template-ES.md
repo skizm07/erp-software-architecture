@@ -20,7 +20,17 @@ Hruschka y Dr. Gernot Starke.
 
 # Introducción y Metas {#section-introduction-and-goals}
 
+El sistema ERP del concesionario de carros tiene como objetivo integrar y automatizar los procesos clave del negocio, permitiendo una gestión eficiente de las compras, el inventario y el control financiero.
+
+En particular, el Módulo de Compras busca optimizar la adquisición de vehículos, repuestos y servicios, garantizando trazabilidad, control de costos y una correcta relación con los proveedores.
+
 ## Vista de Requerimientos {#_vista_de_requerimientos}
+-Registrar, modificar y desactivar proveedores.
+- Crear y gestionar órdenes de compra.
+- Aprobar o rechazar órdenes según roles definidos.
+- Registrar la recepción de productos comprados.
+- Mantener actualizado el inventario.
+- Generar reportes de compras y costos.
 
 ## Metas de Calidad {#_metas_de_calidad}
 
@@ -38,12 +48,29 @@ Hruschka y Dr. Gernot Starke.
 
 # Restricciones de la Arquitectura {#section-architecture-constraints}
 
+Para el desarrollo del ERP del concesionario se tomaron las siguientes decisiones tecnológicas, buscando simplicidad, coherencia y facilidad de mantenimiento.
+
+## Decisiones Tecnológicas
+
+- El backend será desarrollado en **Java utilizando Spring Boot**, bajo una arquitectura monolítica.
+- La base de datos será **PostgreSQL**, por su robustez y soporte para sistemas transaccionales.
+- El frontend será una **Aplicación Web (SPA)** desarrollada con **HTML, CSS y JavaScript**.
+- La comunicación entre frontend y backend se realizará mediante **HTTP/HTTPS usando JSON**.
+- El sistema se integrará con un **Sistema Contable Externo** mediante servicios web.
+- 
 # Alcance y Contexto del Sistema {#section-context-and-scope}
 
 ## Contexto de Negocio {#_contexto_de_negocio}
 
+El ERP del concesionario de carros interactúa con diferentes tipos de usuarios y sistemas externos para cumplir con sus objetivos de negocio.
+
+Los usuarios principales incluyen responsables de compras, gerentes, encargados de bodega y contadores. Además, el sistema se integra con plataformas externas como sistemas de proveedores y sistemas contables.
+
+A continuación, se presenta el Diagrama de Contexto (C1), el cual muestra el sistema ERP como una caja negra y sus interacciones con actores externos.
+
 **\<Diagrama o Tabla\>**
 
+![Diagrama de Contexto](./images/C1.png)
 **\<optionally: Explanation of external domain interfaces\>**
 
 ## Contexto Técnico {#_contexto_técnico}
